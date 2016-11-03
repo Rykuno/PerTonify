@@ -24,13 +24,13 @@ class PlaySoundsViewController: UIViewController {
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
-    
-    enum ButtonType: Int{ case Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb}
+    let endPlayingAudioSound: SystemSoundID = 1114
+
+    enum ButtonType: Int{case Slow, Fast, Chipmunk, Vader, Echo, Reverb}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +39,6 @@ class PlaySoundsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func playSoundForButton(_ sender: UIButton) {
@@ -61,8 +60,8 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
-        print("Stop Audio Button Pressed")
         stopAudio()
+        AudioServicesPlaySystemSound(endPlayingAudioSound)
     }
 
 

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Record Sounds View Controller-->
+        <!--Record -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="TonePerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <constraint firstItem="yZj-hx-zq2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XL0-8B-dBd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qAR-DG-ZXz"/>
+                    <navigationItem key="navigationItem" title="Record " id="qAR-DG-ZXz"/>
                     <connections>
                         <outlet property="recordMessage" destination="pl0-EA-IR6" id="eJi-Lz-osZ"/>
                         <outlet property="startButton" destination="4wO-Ur-p4A" id="AjU-Ou-nVX"/>
@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="1157.5999999999999" y="696.7016491754124"/>
         </scene>
-        <!--Play Sounds View Controller-->
+        <!--Playback-->
         <scene sceneID="Ycg-28-HEi">
             <objects>
                 <viewController id="Ul1-3e-4Xc" customClass="PlaySoundsViewController" customModule="TonePerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,6 +161,7 @@
                             <constraint firstItem="95n-X1-4E7" firstAttribute="top" secondItem="USY-pO-Q4k" secondAttribute="bottom" id="vCO-Fc-baN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Playback" id="bjr-3M-p5y"/>
                     <connections>
                         <outlet property="chipmunkButton" destination="w6f-SN-zPM" id="Ydn-Gx-iiK"/>
                         <outlet property="echoButton" destination="Hgz-6o-U7q" id="jpk-Jc-sGw"/>
